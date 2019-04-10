@@ -114,17 +114,85 @@ more.addEventListener('click', () => {
       setTimeout(() => {
          card.classList.remove('videos__item-active');
       }, 10);
+      bindNewModal(card);
    }
+   
+   sliceTitle('.videos__item-descr', 100);
+
 });
 
 
+function sliceTitle() {
+   document.querySelectorAll(selector).forEach (item =>
+      item.textContent.trim();
 
+      if (item.textContent.lenght < count) {
+         return();
+      } else {
+         const.
+      }
+   )
+}
 
+// Modal windows
+function openModal() {
+   modal.style.display = 'block';
+}
 
+function closeModal() {
+   modal.style.display = 'none';
+}
 
+function bindModal(cards) {
+   card.forEach(item => {
+      item.addEventListener('click', (e) => {
+            // комманда отменяет действия браузера
+            e.preventDefault();
+               openModal();
+      });
+   });
+}
+bindModal(videos);
 
+function bindNewModal(cards) {
+   cards.addEventListener('click', (e) => {
+      // комманда отменяет действия браузера
+         e.preventDefault();
+         openModal();
+   });
+}
 
+modal.addEventListener('click', (e) => {
+   if (!e.target.classList.contains('modal__body')) {
+      closeeModal();
+   }
+});
 
+//взять код отсюда 
+// https://developers.google.com/youtube/iframe_api_reference?hl=ru
+function createVideo {
+   var tag = document.createElement('script');
+
+   tag.src = "https://www.youtube.com/iframe_api";
+   var firstScriptTag = document.getElementsByTagName('script')[0];
+   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+   setTimeout(() => {
+      player = new YT.Player('frame', {
+         height: '100%',
+         width: '100%',
+         videoId: 'M7lc1UVf-VE'
+       });
+      }, 300);
+   })
+}
+
+createVideo();
+
+function loadVideo(id) {
+   player.loadVideo
+}
+  
 
 
 
